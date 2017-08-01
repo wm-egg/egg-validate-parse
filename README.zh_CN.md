@@ -58,7 +58,7 @@ ctx.validateParse(rules.test)
 
 输出结果是所有解析后的参数值对象
 
-参考 [test](config/) 。
+参考 [test](test/) 。
 
 ## 详细配置
 

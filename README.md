@@ -43,7 +43,7 @@ ctx.validateParse(rules.test)
 
 output is a object get all parsed params together.
 
-see [test](config/) for more detail.
+see [test](test/) for more detail.
 
 ## Configuration
 
