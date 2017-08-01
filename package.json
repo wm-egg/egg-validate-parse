@@ -47,12 +47,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-validate-parse.git"
+    "url": "git+https://github.com/keepgoingwm/egg-validate-parse.git"
   },
   "bugs": {
     "url": "https://github.com/eggjs/egg/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-validate-parse#readme",
+  "homepage": "https://github.com/keepgoingwm/egg-validate-parse#readme",
   "author": "wangnew2013@126.com",
   "license": "MIT"
 }

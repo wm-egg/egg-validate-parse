@@ -1,25 +1,5 @@
 # egg-validate-parse
 
-[![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][codecov-image]][codecov-url]
-[![David deps][david-image]][david-url]
-[![Known Vulnerabilities][snyk-image]][snyk-url]
-[![npm download][download-image]][download-url]
-
-[npm-image]: https://img.shields.io/npm/v/egg-validate-parse.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/egg-validate-parse
-[travis-image]: https://img.shields.io/travis/eggjs/egg-validate-parse.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-validate-parse
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-validate-parse.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-validate-parse?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-validate-parse.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-validate-parse
-[snyk-image]: https://snyk.io/test/npm/egg-validate-parse/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/egg-validate-parse
-[download-image]: https://img.shields.io/npm/dm/egg-validate-parse.svg?style=flat-square
-[download-url]: https://npmjs.org/package/egg-validate-parse
-
 <!--
 Description here.
 -->
@@ -40,11 +20,37 @@ exports.validateParse = {
 };
 ```
 
+see [egg-validate](https://github.com/eggjs/egg-validate) for base usage
+
+### validate rule
+
+```
+rules.test = {
+  id: { type: 'string', required: true, scope: 'params', name: 'innerId' }
+}
+```
+
++ `scope` means where to fetch the params (body | params | query | queries | state)
++ `name` means prop name in output object
+
+### use in controller
+
+```
+ctx.validateParse(rules.test)
+```
+
+### output 
+
+output is a object get all parsed params together.
+
+see [test](config/) for more detail.
+
 ## Configuration
 
 ```js
 // {app_root}/config/config.default.js
 exports.validateParse = {
+  defaultScope: 'body'
 };
 ```
 
@@ -56,7 +62,7 @@ see [config/config.default.js](config/config.default.js) for more detail.
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+Please open an issue [here](https://github.com/keepgoingwm/egg-validate-parse/issues).
 
 ## License
 

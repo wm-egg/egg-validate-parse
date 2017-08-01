@@ -11,6 +11,7 @@ module.exports = () => {
 
   exports.validateParse = {
     appName: 'egg:validate-parse',
+    defaultScope: 'body'
   };
 
   return exports;

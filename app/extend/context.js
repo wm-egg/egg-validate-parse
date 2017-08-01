@@ -48,7 +48,7 @@ module.exports = {
 
       ruleKeys.map(key => {
         const rule = rules[key];
-        const scope = rule.scope || 'body';
+        const scope = rule.scope || this.app.config.validateParse.defaultScope;
         const keyName = key;
 
         switch (scope) {
